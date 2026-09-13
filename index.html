@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Negative Feedback Concept Map</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <header class="hero">
+      <div>
+        <h1>Negative Feedback</h1>
+        <p class="subtitle">Build the concept map by placing each component and linking phrase in the correct position.</p>
+      </div>
+      <div class="score-card" aria-live="polite">
+        <span>Progress</span>
+        <strong id="progressText">0 / 13</strong>
+        <small id="retryText">5 retries available</small>
+      </div>
+    </header>
+
+    <nav class="system-tabs" aria-label="Choose negative feedback example">
+      <button class="system-tab active" data-system="a" type="button">
+        <span class="tab-letter">(a)</span>
+        <span>Components of a negative-feedback control system</span>
+      </button>
+      <button class="system-tab" data-system="b" type="button">
+        <span class="tab-letter">(b)</span>
+        <span>Negative-feedback control of room temperature</span>
+      </button>
+      <button class="system-tab" data-system="c" type="button">
+        <span class="tab-letter">(c)</span>
+        <span>Negative-feedback control of body temperature</span>
+      </button>
+    </nav>
+
+    <section class="activity-heading">
+      <div>
+        <h2 id="activityTitle">(a) Components of a negative-feedback control system</h2>
+        <p>Drag an item to the left flow chart, or click an item and then click a flow-chart slot.</p>
+      </div>
+      <div class="actions">
+        <button id="checkBtn" class="btn btn-primary" type="button">Check Answer</button>
+        <button id="hintBtn" class="btn btn-hint" type="button">💡 Hint</button>
+        <button id="retryBtn" class="btn btn-retry hidden-control" type="button">Retry Wrong Options (5 left)</button>
+        <button id="resetBtn" class="btn" type="button">Reset</button>
+      </div>
+    </section>
+
+    <section class="workspace">
+      <section class="panel flow-panel">
+        <div class="panel-heading">
+          <div>
+            <span class="step-kicker">BUILD AREA</span>
+            <h3>Flow Chart</h3>
+          </div>
+          <span id="dropHint" class="drop-hint">Large blue boxes = concepts · small gold pills = linking phrases</span>
+        </div>
+
+        <div class="flow-stage">
+          <div id="flowChart" class="flow-chart"></div>
+
+          <div id="feedbackLoop" class="feedback-loop hidden" aria-hidden="true">
+            <div class="feedback-path"></div>
+            <div class="feedback-top-arrow"></div>
+            <div class="feedback-mid-arrow"></div>
+            <div class="feedback-minus">−</div>
+            <div class="feedback-relieves">relieves</div>
+            <div class="feedback-bottom-label">(negative feedback)</div>
+          </div>
+        </div>
+      </section>
+
+      <aside class="panel bank-panel">
+        <div class="panel-heading">
+          <div>
+            <span class="step-kicker">DRAG ITEMS</span>
+            <h3>Concept Boxes</h3>
+          </div>
+        </div>
+        <p class="bank-instruction">Place these in the large boxes on the left.</p>
+        <div id="conceptBank" class="item-bank"></div>
+      </aside>
+
+      <aside id="linkPanel" class="panel bank-panel link-panel">
+        <div class="panel-heading">
+          <div>
+            <span class="step-kicker">DRAG ITEMS</span>
+            <h3>Linking Phrases</h3>
+          </div>
+        </div>
+        <p class="bank-instruction">Place these between the concept boxes.</p>
+        <div id="linkBank" class="item-bank"></div>
+      </aside>
+    </section>
+
+    <section id="messageBox" class="message neutral" aria-live="polite">
+      Start by dragging a concept box to the first empty position.
+    </section>
+
+    <section id="summaryPanel" class="summary-panel hidden-control" aria-live="polite"></section>
+
+    <footer class="footer-note">
+      Created by: Dr. Khalid Abdul Majeed, Department of Physiology, UVAS
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
